@@ -1,0 +1,30 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+$section-padding: 1rem;
+
+.root-services-partial {
+  padding: 0 5rem;
+  .services-partial {
+    .content {
+      display: flex;
+      padding: 3rem;
+      .grid {
+        display: flex;
+        position: relative;
+        margin: -$section-padding;
+        width: 100%;
+        flex-wrap: wrap;
+        .item {
+          flex: 1 1 25%;
+          min-width: 240px;
+          margin: $section-padding;
+          display: flex;
+          >* {
+            flex: 1 1 auto;
+          }
+        }
+      }
+    }
+  }
+}

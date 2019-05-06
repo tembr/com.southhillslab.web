@@ -1,0 +1,66 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+.root-section-offer {
+  flex: 1 1 auto;
+  display: flex;
+  .section-offer {
+    flex: 1 1 auto;
+    text-align: center;
+    color: $color-white;
+    background: $background-color-main;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    .offer {
+      &-title {
+        flex: 0 0 auto;
+        color: #5AFBBA;
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-bottom: .3rem;
+        white-space: nowrap;
+      }
+      &-promo {
+        flex: 1 1 auto;
+        color: rgba(#FFFFFF, .9);
+        margin: .5rem 0;
+        font-size: 1rem;
+        line-height: 1.2rem;
+      }
+      &-metrics {
+        flex: 0 0 auto;
+        margin: 1rem 0;
+        text-align: center;
+        .metric {
+          font-size: .9rem;
+          line-height: 1.1rem;
+          font-weight: bold;
+        }
+      }
+      &-details {
+        flex: 0 0 auto;
+        color: rgba(#FFFFFF, .9);
+        margin: .5rem 0;
+        font-size: 1rem;
+        line-height: 1.2rem;
+      }
+    }
+    &-highlight {
+      color: $color-black;
+      background: $background-color-accent;
+      .offer {
+        &-title {
+          color: rgba($color-black, .8);
+          font-weight: bold;
+        }
+        &-promo {
+          color: rgba($color-black, .8);
+        }
+        &-details {
+          color: rgba($color-black, .8);
+        }
+      }
+    }
+  }
+}

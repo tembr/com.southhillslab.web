@@ -1,0 +1,29 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+.root-brand-partial {
+  .brand-partial {
+    margin: 0 auto;
+    max-width: 1200px;
+    background: $background-color-light;
+    height: 600px;
+    margin-bottom: 2rem;
+    :global(.v-parallax__content) {
+      box-shadow: inset 0px -100px 50px -50px $background-color-dark;
+    }
+    .content {
+      padding: 0 4rem 12rem;
+      h1 {
+        color: $color-accent;
+        font-size: 4rem;
+        line-height: 4rem;
+        font-weight: 300;
+      }
+      h2 {
+        color: $color-white;
+        font-size: 3rem;
+        font-weight: 300;
+      }
+    }
+  }
+}

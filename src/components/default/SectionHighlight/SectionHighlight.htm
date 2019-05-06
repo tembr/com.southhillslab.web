@@ -1,0 +1,21 @@
+<div class="root-section-highlight">
+  <div class="section-highlight">
+    <h3 class="row-title">{{title}}</h3>
+    <div class="row-promo">{{promo}}</div>
+    <div class="row-counters">
+      <div class="counters">
+        <div v-for="item in counters" class="counter" :key="item.name">
+          <div class="counter-value">{{item.value}}</div>
+          <div class="counter-label">{{item.label}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="row-tags">
+      <div class="tags">
+        <a v-for="item in tags" class="tag" :key="item.name">
+          <div class="tag-label">{{item.label}}</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

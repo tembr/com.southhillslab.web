@@ -1,0 +1,26 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+.root-section-title {
+  box-sizing: border-box;
+  border-left: 4px solid #5AFBBA;
+  padding: 13px 35px 17px 35px;
+  .section-title {
+    .row {
+      &-title {
+        color: #5AFBBA;
+        text-transform: uppercase;
+        font-size: .8rem;
+        margin-bottom: .3rem;
+      }
+      &-subtitle {
+        color: #FFFFFF;
+        text-transform: uppercase;
+        font-size: 2rem;
+        max-width: 600px;
+        line-height: 2.5rem;
+        font-weight: bold;
+      }
+    }
+  }
+}

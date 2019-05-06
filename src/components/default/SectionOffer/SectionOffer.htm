@@ -1,0 +1,14 @@
+<div class="root-section-offer">
+  <div class="section-offer" :class="{
+    'section-offer-highlight': isHighlighted
+  }">
+    <h3 class="offer-title">{{title}}</h3>
+    <div class="offer-promo">{{promo}}</div>
+    <div class="offer-metrics">
+      <div class="metric" v-for="metric in metrics" :key="metric.id">
+        {{metric.text}}
+      </div>
+    </div>
+    <div class="offer-details">{{details}}</div>
+  </div>
+</div>

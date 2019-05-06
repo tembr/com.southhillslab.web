@@ -1,0 +1,24 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+.root-default-layout {
+  background-color: $background-color-main;
+  .default-layout {
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: $background-color-dark;
+
+    :global(input:-webkit-autofill),
+    :global(input:-webkit-autofill:hover),
+    :global(input:-webkit-autofill:focus),
+    :global(input:-webkit-autofill:active) {
+      -webkit-box-shadow: 0 0 0 30px $background-color-dark inset !important;
+      -webkit-text-fill-color: yellow !important;
+    }
+
+    :global(.info--text) {
+      color: $color-accent !important;
+      caret-color: $color-accent !important;
+    }
+  }
+}

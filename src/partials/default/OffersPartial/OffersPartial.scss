@@ -1,0 +1,27 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+$section-padding: 1rem;
+
+.root-offers-partial {
+  padding: 0 5rem;
+  .offers-partial {
+    .content {
+      display: flex;
+      padding: 3rem;
+      .grid {
+        display: flex;
+        position: relative;
+        margin: -$section-padding;
+        width: 100%;
+        flex-wrap: wrap;
+        .item {
+          flex: 1 1 18%;
+          min-width: 160px;
+          margin: $section-padding;
+          display: flex;
+        }
+      }
+    }
+  }
+}

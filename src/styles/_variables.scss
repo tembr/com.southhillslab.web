@@ -1,0 +1,29 @@
+@function get-darkest-color($base-color, $darken, $desaturate, $adjust-hue) {
+  @return adjust-hue(desaturate(darken($base-color, $darken), $desaturate), $adjust-hue);
+}
+
+@function get-lightest-color($base-color, $lighten, $saturate, $adjust-hue) {
+  @return adjust-hue(saturate(lighten($base-color, $lighten), $saturate), $adjust-hue);
+}
+
+$color-black: #000;
+$color-white: #fff;
+
+// $color-active-main: #5f4cba;
+// $color-active-text: #786ab7;
+
+$color-accent: #5AFBBA;
+
+$background-color-main: #0F252A;
+$background-color-dark: #081317;
+$background-color-accent: $color-accent;
+$background-color-light: #052F3B;
+
+// $background-color-light: get-lightest-color($background-color-main, 6, 2, 1);
+$background-color-lighten: get-lightest-color($background-color-main, 12, 4, 2);
+$background-color-lightest: get-lightest-color($background-color-main, 18, 6, 3);
+// $background-color-dark: get-darkest-color($background-color-main, 6, 2, -1);
+$background-color-darken: get-darkest-color($background-color-main, 12, 4, -2);
+$background-color-darkest: get-darkest-color($background-color-main, 18, 6, -3);
+
+$box-shadow-main: 2px 2px 3px rgba($color-black, .15);

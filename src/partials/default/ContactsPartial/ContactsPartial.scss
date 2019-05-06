@@ -1,0 +1,63 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+$section-padding: 2rem;
+
+.root-contacts-partial {
+  padding: 0 5rem;
+  .contacts-partial {
+    .content {
+      display: flex;
+      padding: 3rem;
+      .grid {
+        display: flex;
+        position: relative;
+        margin: -$section-padding;
+        width: 100%;
+        flex-wrap: wrap;
+        .item {
+          flex: 1 1 25%;
+          min-width: 240px;
+          margin: $section-padding;
+        }
+      }
+    }
+
+    .head {
+      margin-bottom: 1rem;
+      .title {
+        &-icon {
+          margin-right: .75rem;
+          fill: $color-accent;
+        }
+        &-label {
+          color: $color-accent;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .body {
+      padding-left: 1.75rem;
+      .row {
+        margin-bottom: .5rem;
+        .contact {
+          &-label {
+            color: rgba($color-white, .5);
+            font-weight: 300;
+            font-size: .9rem;
+          }
+          &-value {
+            font-size: 1.5rem;
+            >a {
+              text-decoration: none;
+              color: $color-white;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

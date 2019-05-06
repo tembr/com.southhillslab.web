@@ -1,0 +1,49 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+.root-footer-partial {
+  .footer-partial {
+    background: $background-color-light;
+    padding: 2rem;
+    text-align: center;
+
+    .head {
+      h3 {
+        font-size: 2rem;
+        font-weight: 300;
+      }
+    }
+    .body {
+      margin: .5rem 0;
+    }
+    .foot {
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      font-size: .9rem;
+      li {
+        flex: 0 0 auto;
+        margin: 0;
+        padding: 1rem;
+        >a {
+          color: $color-white;
+          text-decoration: none;
+          text-transform: uppercase;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .contact {
+      font-size: 2rem;
+      font-weight: 300;
+    }
+  }
+}

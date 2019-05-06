@@ -1,0 +1,37 @@
+<div class="root-members-partial">
+  <div class="members-partial">
+    <section-title
+      title="Team"
+      subtitle="Our team is a like-minded people, united by a high professional level"
+    />
+    <div class="content">
+      <div class="block">
+        <div class="grid">
+          <div class="item" v-for="person in topPersons" :key="person.id">
+            <section-person
+              :image-url="person.imageUrl"
+              :title="person.title"
+              :subtitle="person.subtitle"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="block block-actions" v-if="!isOtherVisible">
+        <div class="align-center">
+          <v-btn color="info" outline round @click="handleViewAll">View All</v-btn>
+        </div>
+      </div>
+      <div class="block" v-if="isOtherVisible">
+        <div class="grid">
+          <div class="item" v-for="person in otherPersons" :key="person.id">
+            <section-person
+              :image-url="person.imageUrl"
+              :title="person.title"
+              :subtitle="person.subtitle"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

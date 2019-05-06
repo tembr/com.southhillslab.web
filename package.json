@@ -1,0 +1,67 @@
+{
+  "name": "com.southhillslab.web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "start": "PORT=8081 sh bin/www",
+    "svg": "vsvg -s ./public/assets/icons/ -t ./src/icons"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0-rc.1",
+    "axios": "^0.18.0",
+    "bignumber.js": "^8.1.1",
+    "config": "^3.0.1",
+    "es6-promise": "^4.2.6",
+    "local-web-server": "^2.6.1",
+    "smoothscroll-polyfill": "^0.4.4",
+    "vue": "^2.6.0",
+    "vue-meta": "^1.5.8",
+    "vue-router": "^3.0.1",
+    "vue-svgicon": "^3.2.6",
+    "vuelidate": "^0.7.4",
+    "vuetify": "^1.5.5",
+    "vuex": "^3.1.0",
+    "vuex-persistedstate": "^2.5.4",
+    "vuex-router-sync": "^5.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.5.0",
+    "@vue/cli-plugin-eslint": "^3.5.0",
+    "@vue/cli-service": "^3.5.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "vue-cli-plugin-vuetify": "^0.5.0",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ]
+}
