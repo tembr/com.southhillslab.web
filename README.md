@@ -27,3 +27,9 @@ Start production server:
 ```
 yarn start
 ```
+
+Start production server using PM2:
+
+```
+pm2 start ecosystem.config.js
+```

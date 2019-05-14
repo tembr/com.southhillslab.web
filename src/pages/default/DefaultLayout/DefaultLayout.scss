@@ -2,10 +2,11 @@
 @import 'src/styles/variables';
 
 .root-default-layout {
+  overflow: visible;
   background-color: $background-color-main;
   .default-layout {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: $site-max-width;
     background-color: $background-color-dark;
 
     :global(input:-webkit-autofill),

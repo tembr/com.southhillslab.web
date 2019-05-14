@@ -2,26 +2,38 @@
 @import 'src/styles/variables';
 
 $section-padding: 1rem;
+$section-padding-small: .5rem;
 
 .root-services-partial {
-  padding: 0 5rem;
   .services-partial {
+    margin: 0 auto;
+    max-width: $content-max-width;
+    padding: 0 1rem;
+    @include screen-min-width (1024px) {
+      padding: 0 5rem;
+    }
     .content {
       display: flex;
       padding: 3rem;
       .grid {
         display: flex;
         position: relative;
-        margin: -$section-padding;
+        margin: -$section-padding-small;
         width: 100%;
         flex-wrap: wrap;
         .item {
           flex: 1 1 25%;
           min-width: 240px;
-          margin: $section-padding;
+          margin: $section-padding-small;
           display: flex;
           >* {
             flex: 1 1 auto;
+          }
+        }
+        @include screen-min-width (1024px) {
+          padding: -$section-padding;
+          .item {
+            margin: $section-padding;
           }
         }
       }

@@ -4,8 +4,13 @@
 $section-padding: 2rem;
 
 .root-contacts-partial {
-  padding: 0 5rem;
   .contacts-partial {
+    margin: 0 auto;
+    max-width: $content-max-width;
+    padding: 0 1rem;
+    @include screen-min-width (1024px) {
+      padding: 0 5rem;
+    }
     .content {
       display: flex;
       padding: 3rem;
@@ -37,7 +42,10 @@ $section-padding: 2rem;
       }
     }
     .body {
-      padding-left: 1.75rem;
+      padding-left: 0rem;
+      @include screen-min-width (1024px) {
+        padding-left: 1.75rem;
+      }
       .row {
         margin-bottom: .5rem;
         .contact {

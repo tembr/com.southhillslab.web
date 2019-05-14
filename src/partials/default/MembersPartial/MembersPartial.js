@@ -26,7 +26,7 @@ export default {
         {
           id: 4,
           title: 'Liana Edwards',
-          subtitle: 'BDR, Networking'
+          subtitle: 'Business Development Representative'
         },
         {
           id: 5,

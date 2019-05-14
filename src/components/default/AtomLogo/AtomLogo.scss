@@ -1,0 +1,28 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+.root-atom-logo {
+  .atom-logo {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    .icon {
+      fill: $color-logo;
+      margin-right: 1.5rem;
+    }
+    .text {
+      color: $color-white;
+      .segment {
+        &-one {
+          font-weight: 900;
+        }
+        &-two {
+          font-weight: 600;
+        }
+        &-three {
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

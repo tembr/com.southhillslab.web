@@ -13,11 +13,14 @@
       flex: 0 0 auto;
       .head-image {
         @include aspect-ratio(1, 1);
-        width: 160px;
+        width: 120px;
         overflow: hidden;
         border-radius: 9999px;
         background: $background-color-main;
         margin: 0 auto;
+        @include screen-min-width (1024px) {
+          width: 160px
+        }
         img {
           max-width: 100%;
           max-height: 100%;

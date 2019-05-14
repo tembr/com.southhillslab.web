@@ -4,25 +4,49 @@
 .root-brand-partial {
   .brand-partial {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: $site-max-width;
     background: $background-color-light;
-    height: 600px;
     margin-bottom: 2rem;
     :global(.v-parallax__content) {
       box-shadow: inset 0px -100px 50px -50px $background-color-dark;
     }
+    :global(.v-parallax__image-container) {
+      filter: brightness(50%);
+      :global(img) {
+        top: -550px;
+      }
+    }
     .content {
-      padding: 0 4rem 12rem;
+      // margin: 0 auto;
+      // max-width: $content-max-width;
+      padding: 0 2rem 12rem;
       h1 {
         color: $color-accent;
-        font-size: 4rem;
-        line-height: 4rem;
-        font-weight: 300;
+        font-size: 3rem;
+        line-height: 3.2rem;
+        font-weight: 400;
       }
       h2 {
         color: $color-white;
-        font-size: 3rem;
+        font-size: 2rem;
+        line-height: 2.5rem;
         font-weight: 300;
+      }
+    }
+    @include screen-min-width (1024px) {
+      :global(.v-parallax__image-container) {
+        filter: brightness(90%);
+      }
+      .content {
+        padding: 0 4rem 22rem;
+        h1 {
+          font-size: 4rem;
+          line-height: 5rem;
+        }
+        h2 {
+          font-size: 3rem;
+          line-height: 3.5rem;
+        }
       }
     }
   }

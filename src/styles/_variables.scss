@@ -6,6 +6,9 @@
   @return adjust-hue(saturate(lighten($base-color, $lighten), $saturate), $adjust-hue);
 }
 
+$site-max-width: 1920px;
+$content-max-width: 1200px;
+
 $color-black: #000;
 $color-white: #fff;
 
@@ -13,6 +16,7 @@ $color-white: #fff;
 // $color-active-text: #786ab7;
 
 $color-accent: #5AFBBA;
+$color-logo: #39FFFF;
 
 $background-color-main: #0F252A;
 $background-color-dark: #081317;

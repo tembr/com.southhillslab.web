@@ -3,26 +3,27 @@
 
 .root-header-partial {
   // height: 90px;
+  position: relative;
+  z-index: 1000;
   .header-partial {
-    // position: fixed;
-    // left: 0;
-    // right: 0;
-    // height: 90px;
-    // z-index: 100;
     .content {
       margin: 0 auto;
-      max-width: 1200px;
+      max-width: $site-max-width;
       background: $background-color-light;
-      padding: 1.5rem 5rem;
+      // background: $;
+      padding: 1.5rem 3rem;
       display: flex;
       align-items: center;
-
+      @include screen-min-width (1024px) {
+        padding: 1.5rem 5rem;
+      }
       .item {
         &-brand {
           flex: 0 0 auto;
+          display: flex;
+          align-items: center;
           h3 {
             font-size: 2rem;
-            font-weight: 300;
           }
         }
         &-divider {

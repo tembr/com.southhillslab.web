@@ -2,15 +2,22 @@
 @import 'src/styles/variables';
 
 .root-footer-partial {
+  position: relative;
+  z-index: 1000;
   .footer-partial {
     background: $background-color-light;
     padding: 2rem;
     text-align: center;
 
     .head {
+      display: flex;
+      justify-content: center;
       h3 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 300;
+        @include screen-min-width (1024px) {
+          font-size: 2rem;
+        }
       }
     }
     .body {
@@ -42,8 +49,11 @@
     }
 
     .contact {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 300;
+      @include screen-min-width (1024px) {
+        font-size: 2rem;
+      }
     }
   }
 }

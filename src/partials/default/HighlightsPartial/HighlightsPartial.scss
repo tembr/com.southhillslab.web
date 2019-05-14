@@ -1,24 +1,35 @@
 @import 'src/styles/mixins';
 @import 'src/styles/variables';
 
-$section-padding: 2rem;
+$section-padding: 1rem;
+$section-padding-small: .5rem;
 
 .root-highlights-partial {
-  padding: 0 5rem;
   .highlights-partial {
+    margin: 0 auto;
+    max-width: $content-max-width;
+    padding: 0 1rem;
+    @include screen-min-width (1024px) {
+      padding: 0 5rem;
+    }
     .content {
       display: flex;
       padding: 3rem;
       .grid {
         display: flex;
         position: relative;
-        margin: -$section-padding;
-        width: 100%;
+        margin: -$section-padding-small;
         flex-wrap: wrap;
         .item {
           flex: 1 1 20%;
           min-width: 240px;
-          margin: $section-padding;
+          margin: $section-padding-small;
+        }
+        @include screen-min-width (1024px) {
+          margin: -$section-padding;
+          .item {
+            margin: $section-padding;
+          }
         }
       }
     }
