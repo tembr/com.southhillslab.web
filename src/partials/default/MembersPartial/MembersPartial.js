@@ -20,6 +20,7 @@ export default {
         },
         {
           id: 3,
+          imageUrl: '/assets/img/members/03 - Boris Tarelkin.png',
           title: 'Boris Tarelkin',
           subtitle: 'CTO, Tech Lead'
         },
