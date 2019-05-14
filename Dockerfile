@@ -1,24 +1,34 @@
-FROM keymetrics/pm2:latest-alpine
-
+FROM keymetrics/pm2:10-alpine
+ARG MODULE="com.southhillslab.web"
 ENV NPM_CONFIG_LOGLEVEL error
-ARG CONF_TYPE_ARG
-ENV CONF_TYPE=$CONF_TYPE_ARG
+COPY . /app
 
-#ENV PORT 8080
-#ENV NODE_ENV development
+RUN echo "[Install dependencies]" \
+  && apk update \
+  && apk upgrade \
+  && apk add --no-cache openssh bash git make gcc g++ python build-base \
+  && echo "[/Install dependencies]"
 
-# Create app directory
-WORKDIR /usr/src/app
+WORKDIR /app/${MODULE}
 
-# Bundle app source
-COPY ./laborx.relay.pages /usr/src/app
-RUN rm -rf /usr/src/app/config/*
-COPY ./laborx.exchange.conf/laborx.relay.pages/ecosystem.config.js /usr/src/app/ecosystem.config.js
-COPY ./laborx.exchange.conf/laborx.relay.pages/config/$CONF_TYPE_ARG.json /usr/src/app/config/default.json
+RUN echo "[Build the app]" \
+ && echo "${MODULE}/package.json" \
+ && cat package.json \
+ && NODE_ENV=develop yarn --no-lockfile \
+ && yarn build \
+ && echo "[/Build the app]"
 
-# Install all dependencies, including devDependencies for the build job
-RUN export NODE_ENV=development && yarn install && yarn cache clean && yarn build && rm -rf /usr/src/app/laborx.relay.pages/.git
+RUN mkdir /data
+RUN mkdir /data/config
 
-ENTRYPOINT ["./start.sh"]
+RUN echo "[Link config files]" \
+ && rm -f /app/${MODULE}/ecosystem.config.js \
+ && rm -rf /app/${MODULE}/config \
+ && ln -s /data/config/config /app/${MODULE}/config \
+ && ln -s /data/config/ecosystem.config.js /app/${MODULE}/ecosystem.config.js \
+ && echo "[/Link config files]"
 
+EXPOSE 8080
+VOLUME /data/config
 
+CMD ["pm2-runtime", "start", "ecosystem.config.js", "--env", "production"]

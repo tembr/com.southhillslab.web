@@ -1,5 +1,5 @@
 {
-  "name": "com.southhillslab.web",
+  "name": "@ntr1x/com.southhillslab.web",
   "version": "1.0.0",
   "private": true,
   "scripts": {

@@ -1,16 +1,4 @@
 {
   "frontend": {
-    "api": {
-      "url": "https://backend.relay.tp.ntr1x.com/api/v1"
-    },
-    "plasma": {
-      "url": "https://plasma.relay.tp.ntr1x.com"
-    },
-    "public": {
-      "url": "https://public.relay.tp.ntr1x.com/api/v1"
-    },
-    "sso": {
-      "url": "https://middle-profile-sso-dev.chronobank.io"
-    }
   }
 }
