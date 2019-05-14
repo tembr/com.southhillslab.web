@@ -60,6 +60,7 @@ export default {
         },
         {
           id: 10,
+          imageUrl: '/assets/img/members/10 - Georgy Selenskih.png',
           title: 'Georgy Selenskih',
           subtitle: 'DevOps Engineer, System Administrator'
         },
@@ -71,16 +72,19 @@ export default {
 
         {
           id: 12,
+          imageUrl: '/assets/img/members/12 - Konstantin Brynchikov.png',
           title: 'Konstantin Brynchikov',
           subtitle: 'Senior Back-end Developer'
         },
         {
           id: 13,
+          imageUrl: '/assets/img/members/13 - Julia Tsygankova.png',
           title: 'Julia Tsygankova',
           subtitle: 'Front-end Developer'
         },
         {
           id: 14,
+          imageUrl: '/assets/img/members/14 - Artem Migranov.png',
           title: 'Artem Migranov',
           subtitle: 'Front-end Developer'
         },
@@ -92,6 +96,7 @@ export default {
         },
         {
           id: 16,
+          imageUrl: '/assets/img/members/16 - Nikita Maksimov.png',
           title: 'Nikita Maksimov',
           subtitle: 'QA Engineer'
         },
@@ -102,6 +107,7 @@ export default {
         },
         {
           id: 18,
+          imageUrl: '/assets/img/members/18 - Alexander Korsun.png',
           title: 'Alexander Korsun',
           subtitle: 'Back-end Developer'
         },
