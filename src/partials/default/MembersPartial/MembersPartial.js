@@ -26,6 +26,7 @@ export default {
         },
         {
           id: 4,
+          imageUrl: '/assets/img/members/04 - Liana Edwards.png',
           title: 'Liana Edwards',
           subtitle: 'Business Development Representative'
         },
@@ -119,8 +120,15 @@ export default {
         },
         {
           id: 20,
-          title: 'Ilia Bochkov',
+          imageUrl: '/assets/img/members/20 - Ilya Bochkov.png',
+          title: 'Ilya Bochkov',
           subtitle: 'Back-end Developer'
+        },
+        {
+          id: 21,
+          imageUrl: '/assets/img/members/21 - Larisa Bulatova.png',
+          title: 'Larisa Bulatova',
+          subtitle: 'Accountant'
         }
       ]
     },
