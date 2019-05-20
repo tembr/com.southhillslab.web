@@ -1,6 +1,7 @@
 import {
   DefaultLayout,
-  DefaultPage
+  DefaultPage,
+  TeamPage
 } from 'src/pages'
 
 export default () => [
@@ -11,6 +12,10 @@ export default () => [
       {
         path: '',
         component: DefaultPage
+      },
+      {
+        path: 'team',
+        component: TeamPage
       }
     ]
   }

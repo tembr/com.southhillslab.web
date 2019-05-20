@@ -1,8 +1,16 @@
 import { debounce } from 'lodash'
+import { ErrorPage } from 'src/pages';
 
 export default {
   name: 'app',
-  components: {},
+  components: {
+    ErrorPage
+  },
+  computed: {
+    error() {
+      return this.$store.state.errorHandler.error;
+    },
+  },
   mounted () {
     this.scrollLisneter = debounce(this.handleScroll, 300)
     document.addEventListener('scroll', this.scrollLisneter);

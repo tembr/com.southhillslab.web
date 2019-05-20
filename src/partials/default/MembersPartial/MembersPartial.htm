@@ -18,7 +18,7 @@
       </div>
       <div class="block block-actions" v-if="!isOtherVisible">
         <div class="align-center">
-          <v-btn color="info" outline round @click="handleViewAll">View All</v-btn>
+          <v-btn color="info" outline round @click.prevent="handleViewAll" tag="a" href="/team">View All</v-btn>
         </div>
       </div>
       <div class="block" v-if="isOtherVisible">

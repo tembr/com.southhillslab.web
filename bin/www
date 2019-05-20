@@ -1,1 +1,1 @@
-./node_modules/.bin/ws -p ${PORT} -d ./dist/ --spa index.html
+./node_modules/@vueneue/ssr-server/docker

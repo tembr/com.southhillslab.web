@@ -4,6 +4,9 @@ export default {
   components: {
     ...components
   },
+  props: {
+    isOtherVisibleDefault: Boolean
+  },
   computed: {
     persons () {
       return [
@@ -141,7 +144,7 @@ export default {
   },
   data () {
     return {
-      isOtherVisible: false
+      isOtherVisible: !!this.isOtherVisibleDefault
     }
   },
   methods: {

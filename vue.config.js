@@ -10,8 +10,17 @@ module.exports = {
       })
     ]
   },
+
   chainWebpack: config => {
       config.resolve.alias
           .set('src', path.resolve(__dirname, 'src'));
+  },
+
+  pwa: {
+    workboxOptions: {
+      templatedUrls: {
+        '/': 'index.ssr.html'
+      }
+    }
   }
 }

@@ -7,14 +7,14 @@
         </h3>
       </div>
       <div class="item-divider"></div>
-      <div class="item-menu hidden-md-and-down">
+      <div class="item-menu hidden-sm-and-down">
         <ul>
-          <li><a href="#about" @click.prevent="handleScrollToSelector('#about')">About</a></li>
-          <li><a href="#pricing" @click.prevent="handleScrollToSelector('#pricing')">Pricing</a></li>
-          <li><a href="#portfolio" @click.prevent="handleScrollToSelector('#portfolio')">Portfolio</a></li>
-          <li><a href="#services" @click.prevent="handleScrollToSelector('#services')">Services</a></li>
-          <li><a href="#team" @click.prevent="handleScrollToSelector('#team')">Team</a></li>
-          <li><a href="#contacts" @click.prevent="handleScrollToSelector('#contacts')">Contacts</a></li>
+          <li><router-link to="/#about">About</router-link></li>
+          <li><router-link to="/#pricing">Pricing</router-link></li>
+          <li><router-link to="/#portfolio">Portfolio</router-link></li>
+          <li><router-link to="/#services">Services</router-link></li>
+          <li><router-link to="/#team">Team</router-link></li>
+          <li><router-link to="/#contacts">Contacts</router-link></li>
         </ul>
       </div>
     </div>

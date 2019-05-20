@@ -1,34 +1,32 @@
-FROM keymetrics/pm2:10-alpine
-ARG MODULE="com.southhillslab.web"
-ENV NPM_CONFIG_LOGLEVEL error
-COPY . /app
+FROM node:10 as builder
 
-RUN echo "[Install dependencies]" \
-  && apk update \
-  && apk upgrade \
-  && apk add --no-cache openssh bash git make gcc g++ python build-base \
-  && echo "[/Install dependencies]"
+ENV NODE_ENV production
 
-WORKDIR /app/${MODULE}
+RUN mkdir -p /home/node/app
+WORKDIR /home/node/app
 
-RUN echo "[Build the app]" \
- && echo "${MODULE}/package.json" \
- && cat package.json \
- && NODE_ENV=develop yarn --no-lockfile \
- && yarn build \
- && echo "[/Build the app]"
+COPY package.json /home/node/app
+RUN yarn --production=false
 
-RUN mkdir /data
-RUN mkdir /data/config
+COPY . /home/node/app
 
-RUN echo "[Link config files]" \
- && rm -f /app/${MODULE}/ecosystem.config.js \
- && rm -rf /app/${MODULE}/config \
- && ln -s /data/config/config /app/${MODULE}/config \
- && ln -s /data/config/ecosystem.config.js /app/${MODULE}/ecosystem.config.js \
- && echo "[/Link config files]"
+RUN yarn ssr:build && \
+  yarn --production && \
+  yarn add core-js regenerator-runtime && \
+  yarn cache clean
 
-EXPOSE 8080
-VOLUME /data/config
+#######################################################
+FROM node:10-alpine
 
-CMD ["pm2-runtime", "start", "ecosystem.config.js", "--env", "production"]
+ENV NODE_ENV production
+ENV HOST 0.0.0.0
+ENV PORT 8080
+
+COPY --from=builder /home/node/app /home/node/app
+
+RUN chown -R node:node /home/node/app
+
+USER node
+WORKDIR /home/node/app
+
+CMD ["./node_modules/@vueneue/ssr-server/docker"]

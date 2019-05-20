@@ -1,0 +1,8 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+.root-team-page {
+  .team-page {
+    padding: 4rem 0;
+  }
+}

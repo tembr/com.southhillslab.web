@@ -12,13 +12,12 @@
     }
     :global(.v-parallax__image-container) {
       filter: brightness(50%);
+      // background-size: cover;
       :global(img) {
         top: -550px;
       }
     }
     .content {
-      // margin: 0 auto;
-      // max-width: $content-max-width;
       padding: 0 2rem 12rem;
       h1 {
         color: $color-accent;
