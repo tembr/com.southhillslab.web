@@ -6,7 +6,7 @@ export default {
   },
   components: {
     ...partials
-  },
+  }
   // async asyncData(/*{ store }*/) {
   //   return new Promise((resolve) => {
   //     setTimeout(() => {
