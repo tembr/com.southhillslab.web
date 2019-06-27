@@ -1,5 +1,5 @@
 import { debounce } from 'lodash'
-import { ErrorPage } from 'src/pages';
+import { ErrorPage } from 'src/pages'
 
 export default {
   name: 'app',

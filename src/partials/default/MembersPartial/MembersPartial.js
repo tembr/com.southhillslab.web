@@ -106,6 +106,7 @@ export default {
         },
         {
           id: 17,
+          imageUrl: '/assets/img/members/17 - Nikita Kochetkov.png',
           title: 'Nikita Kochetkov',
           subtitle: 'Project Manager'
         },
