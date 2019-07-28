@@ -3,15 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "vue-cli-service ssr:serve",
+    "build": "vue-cli-service ssr:build",
+    "start": "vue-cli-service ssr:start",
     "lint": "vue-cli-service lint",
-    "start": "PORT=8081 sh bin/www",
-    "svg": "vsvg -s ./public/assets/icons/ -t ./src/icons",
-    "ssr:serve": "vue-cli-service ssr:serve",
-    "ssr:build": "vue-cli-service ssr:build",
-    "ssr:start": "vue-cli-service ssr:start",
-    "generate": "vue-cli-service generate"
+    "svg": "vsvg -s ./public/assets/icons/ -t ./src/icons"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0-rc.1",
@@ -26,6 +22,7 @@
     "regenerator-runtime": "^0.12.1",
     "smoothscroll-polyfill": "^0.4.4",
     "vue": "^2.6.0",
+    "vue-analytics": "^5.17.0",
     "vue-class-component": "^6.2.0",
     "vue-meta": "^1.5.8",
     "vue-no-ssr": "^0.2.2",

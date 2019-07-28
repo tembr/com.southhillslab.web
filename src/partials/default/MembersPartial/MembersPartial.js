@@ -18,6 +18,7 @@ export default {
         },
         {
           id: 2,
+          imageUrl: '/assets/img/members/02 - Steve Leskiv.jpg',
           title: 'Steve Leskiv',
           subtitle: 'CCO, Art Director'
         },
@@ -31,7 +32,7 @@ export default {
           id: 4,
           imageUrl: '/assets/img/members/04 - Liana Edwards.png',
           title: 'Liana Edwards',
-          subtitle: 'Business Development Representative'
+          subtitle: 'Business Development Manager'
         },
         {
           id: 5,
