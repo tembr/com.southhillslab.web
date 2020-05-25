@@ -53,15 +53,27 @@ export default {
           subtitle: 'Head of Front-end development'
         },
         {
-          id: 8,
-          imageUrl: '/assets/img/members/08 - Evgenii Dobrynin.png',
-          title: 'Evgenii Dobrynin',
-          subtitle: 'Head of QA Department'
+          id: 'kopytkov',
+          imageUrl: '/assets/img/members/Konstantin Kopytkov.jpg',
+          title: 'Konstantin Kopytkov',
+          subtitle: 'Business Development Manager'
+        },
+        {
+          id: 'mikefluff',
+          imageUrl: '/assets/img/members/Mikhail Savchenko.png',
+          title: 'Mikhail Savchenko',
+          subtitle: 'Blockchain Consultant'
         },
         {
           id: 9,
           title: 'Petr Tsatsin',
           subtitle: 'AI Consultant'
+        },
+        {
+          id: 8,
+          imageUrl: '/assets/img/members/08 - Evgenia Vylegzhanina.png',
+          title: 'Evgenia Vylegzhanina',
+          subtitle: 'QA Lead'
         },
         {
           id: 10,
@@ -100,18 +112,6 @@ export default {
           subtitle: 'Back-end Developer'
         },
         {
-          id: 16,
-          imageUrl: '/assets/img/members/16 - Nikita Maksimov.png',
-          title: 'Nikita Maksimov',
-          subtitle: 'QA Engineer'
-        },
-        {
-          id: 17,
-          imageUrl: '/assets/img/members/17 - Nikita Kochetkov.png',
-          title: 'Nikita Kochetkov',
-          subtitle: 'Project Manager'
-        },
-        {
           id: 18,
           imageUrl: '/assets/img/members/18 - Alexander Korsun.png',
           title: 'Alexander Korsun',
@@ -119,9 +119,9 @@ export default {
         },
         {
           id: 19,
-          imageUrl: '/assets/img/members/19 - Petr Evsikov.png',
-          title: 'Petr Evsikov',
-          subtitle: 'Mobile Developer'
+          imageUrl: '/assets/img/members/19 - Vladimir Glushkov.jpg',
+          title: 'Vladimir Glushkov',
+          subtitle: 'Front-end Developer'
         },
         {
           id: 20,
@@ -131,7 +131,26 @@ export default {
         },
         {
           id: 21,
-          imageUrl: '/assets/img/members/21 - Larisa Bulatova.png',
+          // imageUrl: '/assets/img/members/21 - Alexey Gerasimov.png',
+          imageUrl: null,
+          title: 'Alexey Gerasimov',
+          subtitle: 'Front-end Developer'
+        },
+        {
+          id: 16,
+          imageUrl: '/assets/img/members/16 - Maksim Valyakin.png',
+          title: 'Maksim Valyakin',
+          subtitle: 'QA Engineer'
+        },
+        {
+          id: 17,
+          imageUrl: '/assets/img/members/17 - Nikita Kochetkov.png',
+          title: 'Nikita Kochetkov',
+          subtitle: 'Project Manager'
+        },
+        {
+          id: 22,
+          imageUrl: '/assets/img/members/22 - Larisa Bulatova.png',
           title: 'Larisa Bulatova',
           subtitle: 'Accountant'
         }
