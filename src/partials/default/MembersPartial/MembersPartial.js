@@ -42,7 +42,7 @@ export default {
         },
         {
           id: 6,
-          imageUrl: '/assets/img/members/06 - Artem Valyakin.png',
+          imageUrl: '/assets/img/members/Artem Valyakin.jpg',
           title: 'Artem Valyakin',
           subtitle: 'Head of Mobile development'
         },
@@ -71,7 +71,7 @@ export default {
         },
         {
           id: 8,
-          imageUrl: '/assets/img/members/08 - Evgenia Vylegzhanina.png',
+          imageUrl: '/assets/img/members/Evgenia Vylegzhanina.jpg',
           title: 'Evgenia Vylegzhanina',
           subtitle: 'QA Lead'
         },
@@ -131,14 +131,13 @@ export default {
         },
         {
           id: 21,
-          // imageUrl: '/assets/img/members/21 - Alexey Gerasimov.png',
-          imageUrl: null,
+          imageUrl: '/assets/img/members/Alexey Gerasimov.jpg',
           title: 'Alexey Gerasimov',
           subtitle: 'Front-end Developer'
         },
         {
           id: 16,
-          imageUrl: '/assets/img/members/16 - Maksim Valyakin.png',
+          imageUrl: '/assets/img/members/Maksim Valyakin.jpg',
           title: 'Maksim Valyakin',
           subtitle: 'QA Engineer'
         },
