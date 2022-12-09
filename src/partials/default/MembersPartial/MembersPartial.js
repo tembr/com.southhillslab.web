@@ -29,11 +29,17 @@ export default {
           subtitle: 'CTO, Tech Lead'
         },
         {
-          id: 4,
-          imageUrl: '/assets/img/members/04 - Liana Edwards.png',
-          title: 'Liana Edwards',
-          subtitle: 'Business Development Manager'
+          id: 23,
+          imageUrl: '/assets/img/members/Artem Brytkov.jpg',
+          title: 'Artem Brytkov',
+          subtitle: 'CFO, Business Development Manager'
         },
+        // {
+        //   id: 4,
+        //   imageUrl: '/assets/img/members/04 - Liana Edwards.png',
+        //   title: 'Liana Edwards',
+        //   subtitle: 'Business Development Manager'
+        // },
         {
           id: 5,
           imageUrl: '/assets/img/members/05 - Mikhail Kardaev.png',
